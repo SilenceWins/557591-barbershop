@@ -6,18 +6,18 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
+      <nav class="main-navigation" aria-label="Главная навигация">
         <a class="main-header-logo">
           <img src="img/logo.svg" alt="Логотип барбершопа &#171;Бородинский&#187;">
         </a>
-        <ul class="site-navigation">
+        <ul class="site-navigation" aria-label="Страничная навигация">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Прайс-лист</a></li>
           <li><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <ul class="user-navigation">
+        <ul class="user-navigation" aria-label="Пользовательская навигация">
           <li><a href="#">Вход</a></li>
         </ul>
       </nav>
@@ -56,16 +56,16 @@
             <time datetime="01-18">18 января</time>
           </li>
         </ul>
-        <a href="#" class="btn">Все Новости</a>
+        <a class="btn" href="#">Все Новости</a>
       </section>
 
       <section class="gallery">
         <h2>Фотогалерея</h2>
         <figure>
-          <a class="gallery-pic"><img alt="Интерьер"></a>
+          <a class="gallery-pic"><img alt="Интерьер" src="img/interier.jpg"></a>
         </figure>
-        <span class="btn btn-back">назад</span>
-        <span class="btn btn-next">вперед</span>
+        <button class="btn btn-back" type="button">назад</button>
+        <button class="btn btn-next" type="button">вперед</span>
       </section>
 
       <section class="contacts">
@@ -85,7 +85,7 @@
       <section class="appointment">
         <h2>Записаться</h2>
         <p>укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <form>
+        <form method="POST" action="https://echo.htmlacademy.ru">
           <p class="appointment-field">
             <label for="date">Дата</label>
             <input type="date" id="date" name="date" required>
@@ -115,35 +115,44 @@
       </p>
       <div class="footer-social">
         <b>Давайте дружить</b>
-        <ul>
-          <li><a class="btn btn-social" href="#">ВКонтакте</a></li>
-          <li><a class="btn btn-social" href="#">Фейсбук</a></li>
-          <li><a class="btn btn-social" href="#">Инстаграм</a></li>
+        <ul aria-label="Ссылки на соцсети">
+          <li><a class="btn btn-social" href="#" aria-label="ВКонтакте">ВКонтакте</a></li>
+          <li><a class="btn btn-social" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+          <li><a class="btn btn-social" href="#" aria-label="Инстаграм">Инстаграм</a></li>
         </ul>
       </div>
       <p class="footer-credits">
         <b>Разработано</b>
-        <a href="#" class="btn">htmlacademy.ru</a>
+        <a class="btn" href="#">htmlacademy.ru</a>
       </p>
     </footer>
 
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите, пожалуйста, свой логин и пароль</p>
-      <form action="">
-        <input type="email" name="login" required placeholder="Логин">
-        <input type="password" name="password" required placeholder="Пароль">
-        <input type="checkbox" name="remember" id="remember" checked>
-        <label for="remember">Запомните меня</label>
-        <a href="#">Я забыл пароль!</a>
+      <form method="POST" action="https://echo.htmlacademy.ru">
+        <p>
+          <label>
+            <span class="visually-hidden">Логин</span>
+            <input type="email" name="login" placeholder="Логин" required>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="visually-hidden">Пароль</span>
+            <input type="password" name="password" placeholder="Пароль" required>
+          </label>
+        </p>
+        <p>
+          <label for="remember">
+            Запомните меня
+            <input type="checkbox" name="remember" id="remember" checked>
+          </label>
+          <a href="#">Я забыл пароль!</a>
+        </p>
         <button class="btn" type="submit">Войти</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
-    </section>
-
-    <section class="modal modal-map">
-      <h2 class="visually-hidden">Карта. Как до нас добраться</h2>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button" aria-label="Закрыть">Закрыть</button>
     </section>
 
   </body>

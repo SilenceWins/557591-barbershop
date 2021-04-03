@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Барбершоп &#171;Бородинский&#187;. Прайс-лист</title>
 </head>
 <body>
   <header class="secondary-header">
-    <nav class="secondary-navigation">
-      <a href="index.html" class="secondary-header-logo">
+    <nav class="secondary-navigation" aria-label="Главная навигация">
+      <a class="secondary-header-logo" href="index.html">
         <img src="img/logo-secondary.svg" alt="Логотип барбершопа &#171;Бородинский&#187;">
       </a>
-      <ul class="site-navigation">
+      <ul class="site-navigation" aria-label="Страничная навигация">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Новости</a></li>
-        <li><a>Прайс-лист</a></li>
+        <li><a aria-current="page">Прайс-лист</a></li>
         <li><a href="#">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
-      <ul class="user-navigation">
+      <ul class="user-navigation" aria-label="Пользовательская навигация">
         <li><a href="#">Вход</a></li>
       </ul>
     </nav>
@@ -27,10 +27,10 @@
 
   <main class="container">
     <h1>Прайс-лист</h1>
-    <ul class="breadcrumbs">
+    <ol class="breadcrumbs">
       <li class="crumb"><a href="index.html">Главная</a></li>
-      <li class="crumb active"><a>Прайс-лист</a></li>
-    </ul>
+      <li class="crumb active"><a aria-current="page">Прайс-лист</a></li>
+    </ol>
     <b class="tagline">Истинно мужская классика</b>
 
     <section class="means">
@@ -76,30 +76,45 @@
     </p>
     <div class="footer-social">
       <b>Давайте дружить</b>
-      <ul>
-        <li><a class="btn btn-social" href="#">ВКонтакте</a></li>
-        <li><a class="btn btn-social" href="#">Фейсбук</a></li>
-        <li><a class="btn btn-social" href="#">Инстаграм</a></li>
+      <ul aria-label="Ссылки на соцсети">
+        <li><a class="btn btn-social" href="#" aria-label="ВКонтакте">ВКонтакте</a></li>
+        <li><a class="btn btn-social" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+        <li><a class="btn btn-social" href="#" aria-label="Инстаграм">Инстаграм</a></li>
       </ul>
     </div>
     <p class="footer-credits">
       <b>Разработано</b>
-      <a href="#" class="btn">htmlacademy.ru</a>
+      <a class="btn" href="#">htmlacademy.ru</a>
     </p>
   </footer>
 
   <section class="modal modal-login">
     <h2>Личный кабинет</h2>
     <p>Введите, пожалуйста, свой логин и пароль</p>
-    <form action="">
-      <input type="email" name="login" required placeholder="Логин">
-      <input type="password" name="password" required placeholder="Пароль">
-      <input type="checkbox" name="remember" id="remember" checked>
-      <label for="remember">Запомните меня</label>
-      <a href="#">Я забыл пароль!</a>
+    <form method="POST" action="https://echo.htmlacademy.ru">
+      <p>
+        <label>
+          <span class="visually-hidden">Логин</span>
+          <input type="email" name="login" placeholder="Логин" required>
+        </label>
+      </p>
+      <p>
+        <label>
+          <span class="visually-hidden">Пароль</span>
+          <input type="password" name="password" placeholder="Пароль" required>
+        </label>
+      </p>
+      <p>
+        <label for="remember">
+          Запомните меня
+          <input type="checkbox" name="remember" id="remember" checked>
+        </label>
+        <a href="#">Я забыл пароль!</a>
+      </p>
       <button class="btn" type="submit">Войти</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button" aria-label="Закрыть">Закрыть</button>
   </section>
+
 </body>
 </html>
