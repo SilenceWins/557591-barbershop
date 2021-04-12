@@ -2,13 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Барбершоп &#171;Бородинский&#187;</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation" aria-label="Главная навигация">
         <a class="main-header-logo">
-          <img src="img/logo.svg" alt="Логотип барбершопа &#171;Бородинский&#187;">
+          <img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа &#171;Бородинский&#187;">
         </a>
         <ul class="site-navigation" aria-label="Страничная навигация">
           <li><a href="#">Информация</a></li>
@@ -44,67 +48,69 @@
         </ul>
       </section>
 
-      <section class="news">
-        <h2>Новости</h2>
-        <ul class="news-list">
-          <li class="news-item">
-            <p>нам наконец завезли ягермайстер! теперь вы можете пропустить стаканчик во время стрижки</p>
-            <time datetime="01-11">11 января</time>
-          </li>
-          <li class="news-item">
-            <p>в нашей команде пополнение, борис «бритва» стригунец, обладaтель множества титулов и наград пополнил наши стройные ряды</p>
-            <time datetime="01-18">18 января</time>
-          </li>
-        </ul>
-        <a class="btn" href="#">Все Новости</a>
-      </section>
+      <div class="index-wrapper">
+        <section class="news">
+          <h2>Новости</h2>
+          <ul class="news-list">
+            <li class="news-item">
+              <p>нам наконец завезли ягермайстер! теперь вы можете пропустить стаканчик во время стрижки</p>
+              <time datetime="01-11">11 января</time>
+            </li>
+            <li class="news-item">
+              <p>в нашей команде пополнение, борис «бритва» стригунец, обладaтель множества титулов и наград пополнил наши стройные ряды</p>
+              <time datetime="01-18">18 января</time>
+            </li>
+          </ul>
+          <a class="btn" href="#">Все Новости</a>
+        </section>
+        <section class="gallery">
+          <h2>Фотогалерея</h2>
+          <figure>
+            <a class="gallery-pic"><img alt="Интерьер" src="img/interier.jpg" width="286" height="163"></a>
+          </figure>
+          <button class="btn btn-back" type="button">назад</button>
+          <button class="btn btn-next" type="button">вперед</span>
+        </section>
+      </div>
 
-      <section class="gallery">
-        <h2>Фотогалерея</h2>
-        <figure>
-          <a class="gallery-pic"><img alt="Интерьер" src="img/interier.jpg"></a>
-        </figure>
-        <button class="btn btn-back" type="button">назад</button>
-        <button class="btn btn-next" type="button">вперед</span>
-      </section>
-
-      <section class="contacts">
-        <h2>Контактная Информация</h2>
-        <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
-          АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
-          ТЕЛЕФОН: +7 (495) 666-02-66
-        </p>
-        <p>ВРЕМЯ РАБОТЫ:<br>
-          ПН—ПТ: С 10:00 ДО 22:00<br>
-          СБ—ВС: С 10:00 ДО 19:00
-        </p>
-        <a class="btn" href="#">Как проехать</a>
-        <a class="btn" href="#">Обратная связь</a>
-      </section>
-
-      <section class="appointment">
-        <h2>Записаться</h2>
-        <p>укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <form method="POST" action="https://echo.htmlacademy.ru">
-          <p class="appointment-field">
-            <label for="date">Дата</label>
-            <input type="date" id="date" name="date" required>
+      <div class="index-wrapper">
+        <section class="contacts">
+          <h2>Контактная Информация</h2>
+          <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+            АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
+            ТЕЛЕФОН: +7 (495) 666-02-66
           </p>
-          <p class="appointment-field">
-            <label for="time">Время</label>
-            <input type="time" id="time" name="time" required>
+          <p>ВРЕМЯ РАБОТЫ:<br>
+            ПН—ПТ: С 10:00 ДО 22:00<br>
+            СБ—ВС: С 10:00 ДО 19:00
           </p>
-          <p class="appointment-field">
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name" name="name" required>
-          </p>
-          <p class="appointment-field">
-            <label for="tel">Телефон</label>
-            <input type="tel" id="tel" name="phone" required>
-          </p>
-          <button type="submit">Отправить</button>
-        </form>
-      </section>
+          <a class="btn" href="#">Как проехать</a>
+          <a class="btn" href="#">Обратная связь</a>
+        </section>
+        <section class="appointment">
+          <h2>Записаться</h2>
+          <p>укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+          <form method="POST" action="https://echo.htmlacademy.ru">
+            <p class="appointment-field">
+              <label for="date">Дата</label>
+              <input type="text" id="date" name="date" placeholder="08.10.2020" required>
+            </p>
+            <p class="appointment-field">
+              <label for="time">Время</label>
+              <input type="text" id="time" name="time" placeholder="10:00" required>
+            </p>
+            <p class="appointment-field">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" name="name" placeholder="Борода" required>
+            </p>
+            <p class="appointment-field">
+              <label for="tel">Телефон</label>
+              <input type="tel" id="tel" name="phone" placeholder="+7 123 456-78-90" required>
+            </p>
+            <button class="btn" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
@@ -114,16 +120,16 @@
         телефон: +7 (495) 666-02-66
       </p>
       <div class="footer-social">
-        <b>Давайте дружить</b>
+        <b>Давайте дружить!</b>
         <ul aria-label="Ссылки на соцсети">
-          <li><a class="btn btn-social" href="#" aria-label="ВКонтакте">ВКонтакте</a></li>
-          <li><a class="btn btn-social" href="#" aria-label="Фейсбук">Фейсбук</a></li>
-          <li><a class="btn btn-social" href="#" aria-label="Инстаграм">Инстаграм</a></li>
+          <li><a class="footer-btn btn-social" href="#" aria-label="ВКонтакте">ВКонтакте</a></li>
+          <li><a class="footer-btn btn-social" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+          <li><a class="footer-btn btn-social" href="#" aria-label="Инстаграм">Инстаграм</a></li>
         </ul>
       </div>
       <p class="footer-credits">
         <b>Разработано</b>
-        <a class="btn" href="#">htmlacademy.ru</a>
+        <a class="footer-btn" href="#">htmlacademy.ru</a>
       </p>
     </footer>
 
@@ -144,7 +150,7 @@
           </label>
         </p>
         <p>
-          <label for="remember">
+          <label class="remember" for="remember">
             Запомните меня
             <input type="checkbox" name="remember" id="remember" checked>
           </label>
@@ -152,7 +158,13 @@
         </p>
         <button class="btn" type="submit">Войти</button>
       </form>
-      <button class="modal-close" type="button" aria-label="Закрыть">Закрыть</button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </section>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как к нам добраться</h2>
+      <img src="img/map.jpg" width="767" height="561" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
 
   </body>
